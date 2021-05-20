@@ -1,0 +1,7 @@
+﻿name;quantity;type;text;path_img
+Spore patient 0;6;spore;;
+Spore ;30;spore;;
+ADN saint;30;adn;;
+Voyage tranquille;20;saut;;
+Fin du voyage;1;saut;Le voyage s'arrête ici;
+Pluie d'astéroïdes;3;saut;Les ventillations du vaiseau subissent des dégats ;

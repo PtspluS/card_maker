@@ -1,11 +1,12 @@
 {
+  "name" : "test",
   "type" :
   [
-    {"saut" : "./template/template_event.html"},
-    {"role" :  "./template/template_role.html"},
-    {"malus" :  "./template/template_malus.html"},
-    {"piece" :  "./template/template_piece.html"},
-    {"spore" :  "./template/template_spore.html"},
-    {"adn" :  "./template/template_adn.html"}
+    {"saut" : "./template/template_saut.dj.html"},
+    {"role" :  "./template/template_role.dj.html"},
+    {"malus" :  "./template/template_malus.dj.html"},
+    {"piece" :  "./template/template_piece.dj.html"},
+    {"spore" :  "./template/template_spore.dj.html"},
+    {"adn" :  "./template/template_adn.dj.html"}
   ]
 }

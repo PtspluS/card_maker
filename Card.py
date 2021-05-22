@@ -1,4 +1,5 @@
-import json
+from django.template import Template, Context
+from django.template.loader import render_to_string
 
 
 class Card:
@@ -25,5 +26,17 @@ class Card:
         self.config = config
 
         for t in config["type"]:
-            if type == t:
-                self.template = t
+            if type in t:
+                self.template = t.get(type)
+
+
+    def create(self):
+        context = {
+            'name': self.name,
+            'path_img': self.path_img,
+            'text': self.text
+        }
+
+        str = render_to_string(self.template, context)
+
+        return str

@@ -1,7 +1,3 @@
-from django.template import Template, Context
-from django.template.loader import render_to_string
-
-
 class Card:
 
     def __init__(self, name, type, cost, places, subtype, text, path_img, config):
@@ -37,6 +33,8 @@ class Card:
             'text': self.text
         }
 
-        str = render_to_string(self.template, context)
+        template = open(self.template, 'r')
+        str = template.read().format()
+        template.close()
 
         return str

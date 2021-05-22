@@ -2,7 +2,6 @@ from html2image import Html2Image
 import pandas as pd
 import json
 import os
-from django.template import Template, Context
 
 from Card import Card
 
@@ -27,6 +26,7 @@ def main():
     qd_cards = sum(cards["quantity"])
     print("Quantity of cards = %i" % qd_cards)
     print("Number of sheets generated = %i" % (qd_cards % 9 + qd_cards // 9))
+
     # try to create a directory based on the name of the deck in the config to save pages to print inside
     try:
         print("Creating directory %s" % config["name"])
@@ -63,7 +63,7 @@ def main():
     tmp_list = []
     for i in range(len(deck)):
         tmp_list.append(deck[i])
-        if i % 9 == 0:
+        if i % 8 == 0 and i != 0:
             create_page(list_cards=tmp_list, path="./"+config["name"])
             tmp_list.clear()
 

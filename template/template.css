@@ -1,0 +1,17 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 64mm 64mm 64mm;
+    grid-template-rows: 89mm 89mm 89mm;
+    grid-column-gap: 4mm;
+    grid-row-gap: 4mm;
+    background-color: white;
+}
+
+.card {
+    background-color: blue;
+}

@@ -13,5 +13,59 @@ body, html {
 }
 
 .card {
-    background-color: blue;
+    background-color: #4b4453;
+    border: 2mm solid black;
+    border-radius: 5%;
+}
+
+.card > span {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+
+.name{
+    color: #c34a36;
+    font-family: OCR A Std, monospace;
+    font-stretch: semi-condensed;
+}
+
+.card > span > img {
+
+}
+
+.text {
+    color: #b0a8b9;
+    font-family: 'Times New Roman', serif;
+    font-stretch: ultra-condensed;
+}
+
+/********************
+* For special cards *
+*********************/
+
+/* For the piece card */
+
+.card > span > span {
+    
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    
+      
+}
+
+.card > span > span >.name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.places{
+    color: #845ec2;
+}
+
+.cost{
+    color: #ff8066;
 }

@@ -12,9 +12,36 @@ def create_page_img(html, path,  id=0):
 
 
 def create_page(list_cards, path):
-    for c in list_cards:
-        str = c.create()
+    # open the template file
+    tp = open("./template/template_sheet.html", 'r').read()
+    html = open(path+"tmp_template_html", "w+")
+    html += tp
+    tp.close()
 
+    for i in len(list_cards):
+        str = list_cards[i].create()
+
+        if i == 0:
+            html.format(card1=str)
+        elif i == 1:
+            html.format(card2=str)
+        elif i == 2:
+            html.format(card3=str)
+        elif i == 3:
+            html.format(card4=str)
+        elif i == 4:
+            html.format(card5=str)
+        elif i == 5:
+            html.format(card6=str)
+        elif i == 6:
+            html.format(card7=str)
+        elif i == 7:
+            html.format(card8=str)
+        elif i == 8:
+            html.format(card9=str)
+
+    html.close()
+    create_page_img(html=html, path=path)
 
 def main():
     cards = pd.read_csv("./cards.csv", sep=";")
